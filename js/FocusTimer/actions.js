@@ -20,4 +20,5 @@ export function toggleMusic() {
 
 export function set() {
   el.minutes.setAttribute("contenteditable", true)
+  el.minutes.focus()
 }
