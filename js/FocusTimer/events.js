@@ -20,4 +20,8 @@ export function setMinutes() {
 
   // Expressão regular. Foi digitado um número
   el.minutes.onkeypress = (event) => /\d/.test(event.key)
+
+  el.minutes.addEventListener("onkeypress", (event) => {
+    
+  })
 }
