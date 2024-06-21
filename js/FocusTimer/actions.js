@@ -5,12 +5,18 @@ import * as el from "./elements.js"
 export function toggleRunning() {
   state.isRunning = document.documentElement.classList.toggle("running")
 
+  if (state.isRunning) {
+    el.cursorTimer.classList.add("blink")
+  } else {
+    el.cursorTimer.classList.remove("blink")
+  }
   timer.countdown()
 }
 
 export function reset() {
   state.isRunning = false
   document.documentElement.classList.remove("running")
+  el.cursorTimer.classList.remove("blink")
   timer.updateDisplay()
 }
 

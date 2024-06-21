@@ -107,3 +107,21 @@ html:not(.running) .ph-stop-circle,
 html:not(.music-on) .ph-speaker-high {
   display: none;
 }
+
+/* Animation */
+.blink {
+  animation: blink-animation 0.8s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes -webkit-blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
